@@ -26,6 +26,12 @@
 	width: 25%;
 }
 
+.amenities h4 {
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .container .filters button {
 	font-size: 18px;
 	background-color: #FF5A5F;

@@ -6,6 +6,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts/1-hbnb.js') }}"></script>
     <title>Holberton AirBnB</title>
 
     <!-- FAVICON -->
@@ -16,12 +18,6 @@
 	 CSS styles
 	 ********************** -->
 
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/4-common.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/3-header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/3-footer.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/6-filters.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/8-places.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.css') }}"> -->
     <link rel="stylesheet" href="{{ '../static/styles/4-common.css?' + cache_id }}">
     <link rel="stylesheet" href="{{ '../static/styles/3-header.css?' + cache_id }}">
     <link rel="stylesheet" href="{{ '../static/styles/3-footer.css?' + cache_id }}">
@@ -79,7 +75,7 @@
 	    <h4>&nbsp;</h4>
 	    <ul class="popover">
 	      {% for amenity in amens|sort(attribute='name') %}
-	      <LI>{{ amenity.name }}</LI>
+	      <LI><INPUT data-id="{{ amenity.id }}" data-name="{{ amenity.name }}" type="checkbox" style="margin-right:10px"/>{{ amenity.name }}</LI>
 	      {% endfor %}
 	    </ul>
 	  </div>
