@@ -31,10 +31,10 @@ $('document').ready(function () {
     }
   });
   $.ajax({
-    type: 'POST',
     url: placesSearch,
+    type: 'POST',
     data: '{}',
-    contentType: 'application/json',
+    contentType: "application/json",
     success: function (data) {
       console.log(data);
     }
