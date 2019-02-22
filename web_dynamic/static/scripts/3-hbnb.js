@@ -1,5 +1,5 @@
 let url = 'http://0.0.0.0:5001/api/v1/status/';
-let places_search = 'http://0.0.0.0:5001/api/v1/places_search/'
+let placesSearch = 'http://0.0.0.0:5001/api/v1/places_search/'
 $('document').ready(function () {
   const amenityChecked = {};
   const amenityCheckboxArray = Array.from($('div.amenities input:checkbox'));
@@ -31,10 +31,10 @@ $('document').ready(function () {
     }
   });
   $.ajax({
-    url: places_search,
     type: 'POST',
+    url: placesSearch,
     data: '{}',
-    contentType: "application/json",
+    contentType: 'application/json',
     success: function (data) {
       console.log(data);
     }
