@@ -1,4 +1,4 @@
-let url = "http://0.0.0.0:5001/api/v1/status/"
+let url = 'http://0.0.0.0:5001/api/v1/status/';
 $('document').ready(function () {
   const amenityChecked = {};
   const amenityCheckboxArray = Array.from($('div.amenities input:checkbox'));
@@ -11,7 +11,7 @@ $('document').ready(function () {
       }
       // update h4 amenities list (ordered)
       let list = [];
-      for (id in amenityChecked) {
+      for (let id in amenityChecked) {
         list.push(amenityChecked[id]);
       }
       list.sort();
@@ -23,15 +23,10 @@ $('document').ready(function () {
     });
   }
   $.get(url, function (data, statusText, xhr) {
-    console.log(data);
-    console.log(statusText);
-    console.log(xhr.status);
-    if (statusText === "success")
-    {
-      console.log("here");
-      $("DIV#api_status").toggleClass("available");
+    if (statusText === 'success') {
+      $('DIV#api_status').toggleClass('available');
     } else {
-      $("DIV#api_status").toggleClass("available");
+      $('DIV#api_status').toggleClass('available');
     }
   });
 });

@@ -10,7 +10,7 @@ $('document').ready(function () {
       }
       // update h4 amenities list (ordered)
       let list = [];
-      for (id in amenityChecked) {
+      for (let id in amenityChecked) {
         list.push(amenityChecked[id]);
       }
       list.sort();
