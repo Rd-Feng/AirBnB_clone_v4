@@ -1,4 +1,4 @@
-let url = 'http://0.0.0.0:5001/api/v1/status/';
+let url = 'http://34.73.207.106:8002/api/v1/status/';
 $('document').ready(function () {
   const amenityChecked = {};
   const amenityCheckboxArray = Array.from($('div.amenities input:checkbox'));
