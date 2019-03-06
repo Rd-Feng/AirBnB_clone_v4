@@ -22,11 +22,25 @@ $('document').ready(function () {
       }
     });
   }
-  $.get(url, {'Access-Control-Allow-Origin': '*'}, function (data, statusText, xhr) {
-    if (statusText === 'success') {
-      $('DIV#api_status').toggleClass('available');
-    } else {
-      $('DIV#api_status').toggleClass('available');
+  $.ajax({
+    type: 'GET',
+    crossDomain: true,
+    headers: {'Access-Control-Allow-Origin': '*'},
+    dataType: 'json',
+    url: url,
+    success: function (data, statusText, xhr) {
+      if (statusText === 'success') {
+        $('DIV#api_status').toggleClass('available');
+      } else {
+        $('DIV#api_status').toggleClass('available');
+      }
     }
-  });
+  })
+  // $.get(url, {'Access-Control-Allow-Origin': '*'}, function (data, statusText, xhr) {
+  //   if (statusText === 'success') {
+  //     $('DIV#api_status').toggleClass('available');
+  //   } else {
+  //     $('DIV#api_status').toggleClass('available');
+  //   }
+  // });
 });
