@@ -26,7 +26,7 @@ $('document').ready(function () {
     type: 'GET',
     crossDomain: true,
     headers: {'Access-Control-Allow-Origin': '*'},
-    dataType: 'json',
+    dataType: 'jsonp',
     url: url,
     success: function (data, statusText, xhr) {
       if (statusText === 'success') {
