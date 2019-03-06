@@ -22,7 +22,7 @@ $('document').ready(function () {
       }
     });
   }
-  $.get(url, function (data, statusText, xhr) {
+  $.get(url, {'Access-Control-Allow-Origin': '*'}, function (data, statusText, xhr) {
     if (statusText === 'success') {
       $('DIV#api_status').toggleClass('available');
     } else {
